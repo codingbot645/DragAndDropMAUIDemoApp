@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{7C302562-325E-46E2-9E60-F9845DEFA474}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DragDropMAUIDemo/Controls/ImageStack.xaml.cs">
+    <Files>
+      <File FileName="DragDropMAUIDemo/Controls/ImageStack.xaml" />
+      <File FileName="DragDropMAUIDemo/Controls/PhotoGridView.xaml" />
+      <File FileName="DragDropMAUIDemo/Controls/PhotoGridView.xaml.cs" />
+      <File FileName="DragDropMAUIDemo/View/MainPage.xaml" />
+      <File FileName="DragDropMAUIDemo/Controls/ImageStack.xaml.cs" Line="19" Column="18" />
+      <File FileName="DragDropMAUIDemo/View/MainPage.xaml.cs" />
+      <File FileName="DragDropMAUIDemo/ViewModel/MainPageViewModel.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DragDropMAUIDemo" expanded="True">
+            <Node name="DragDropMAUIDemo" expanded="True">
+              <Node name="Controls" expanded="True">
+                <Node name="ImageStack.xaml" expanded="True">
+                  <Node name="ImageStack.xaml.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="View" expanded="True" />
+              <Node name="ViewModel" expanded="True" />
+              <Node name="AppShell.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.DragDropMAUIDemo PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+</Properties>

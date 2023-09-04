@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VerticalStackLayout BackgroundColor="White"
+                     Padding="20"
+                     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                      x:Class="DragDropMAUIDemo.Controls.PhotoGridView"
+                     x:Name="CustomPhotosStackView"
+                     xmlns:model ="clr-namespace:DragDropMAUIDemo.Model"
+                     xmlns:viewmodel = "clr-namespace:DragDropMAUIDemo.ViewModel"
+                     x:DataType="viewmodel:MainPageViewModel">
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Images"
+                       TextColor="Black"
+                       HorizontalOptions="FillAndExpand"
+                       Style="{StaticResource MediumBold}"/>
+                <Button Text="Select"
+                       HorizontalOptions="End"
+                       BackgroundColor="{Binding SelectedBtnColor}"
+                       Padding="10"
+                       TextColor="White"
+                       VerticalOptions="Center"
+                       Command="{Binding SelectBtnClickCommand}"
+                      />
+            </StackLayout>
+            <!-- Image collection view -->
+            <CollectionView Margin="0,20"
+                            BackgroundColor="White"
+                            x:Name="collectionView"
+                            ItemsSource="{Binding ImageList}"
+                            VerticalScrollBarVisibility="Never"
+                   
+                            >
+                
+                <CollectionView.ItemsLayout >
+                    <GridItemsLayout Span="3"
+                                     Orientation="Vertical"
+                                     HorizontalItemSpacing="5"
+                                     VerticalItemSpacing="5"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:ImageModel">
+                        <Border WidthRequest="{Binding ImageWidth}"
+                                HeightRequest="{Binding ImageHeight}"
+                                BackgroundColor="Transparent"
+                                Padding="0"
+                                Stroke="{Binding BorderColor}"
+                                StrokeThickness="5">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectImageCommand, Source={RelativeSource AncestorType={x:Type viewmodel:MainPageViewModel}}}"
+                                                          CommandParameter="{Binding .}"/>
+                                    <DragGestureRecognizer DragStarting="DragGestureRecognizer_DragStarting"
+                                                           />
+                                </Border.GestureRecognizers>
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="10"/>
+                                </Border.StrokeShape>
+                                <Frame BackgroundColor="Transparent"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand"
+                                       Padding="0"
+                                       HasShadow="False"
+                                       CornerRadius="10"
+                                       IsClippedToBounds="True">
+                                    <Image Source="{Binding ImageURL}"
+                                           Aspect="AspectFill"/>
+                                </Frame>
+                        </Border>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+</VerticalStackLayout>
