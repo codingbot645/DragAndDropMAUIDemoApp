@@ -12,10 +12,6 @@
                HorizontalOptions="CenterAndExpand"
                VerticalOptions="CenterAndExpand"
                x:Name="ImageFrame">
-            <!--<Frame.GestureRecognizers>
-                <DropGestureRecognizer AllowDrop="True" Drop="DropGestureRecognizer_Drop"/>
-
-            </Frame.GestureRecognizers>-->
             <Image Source="{Binding SelectedImageModel.ImageURL}"
                    Aspect="AspectFill"/>
         </Frame>
