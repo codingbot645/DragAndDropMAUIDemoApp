@@ -47,8 +47,6 @@
                                 Stroke="{Binding BorderColor}"
                                 StrokeThickness="5">
                                 <Border.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding SelectImageCommand, Source={RelativeSource AncestorType={x:Type viewmodel:MainPageViewModel}}}"
-                                                          CommandParameter="{Binding .}"/>
                                     <DragGestureRecognizer DragStarting="DragGestureRecognizer_DragStarting"
                                                            />
                                 </Border.GestureRecognizers>
